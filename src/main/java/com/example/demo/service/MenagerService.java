@@ -44,7 +44,7 @@ public class MenagerService {
       List<String> audiosPart = audioService.splitAudio(localPath + AUDIO_FILE_NAME, localPath, PREFIXO, DURACAO_MAXIMA, dutarionAudio);
 
       for(String audioPart : audiosPart) {
-        //TODO pensar em uma maneira de suavizar a transição de um audio para o outro, pois eles perdem o sentido quando a ia análisa o próximo.
+     
         filePathAudioList.add(audioService.readFileAudio(audioPart));
       }
     }
@@ -53,7 +53,6 @@ public class MenagerService {
       try {
         geminiService.sendToGemini(audio);
       } catch (Exception e) {
-        //TODO melhorar as exceptions
         throw new RuntimeException(e);
       }
     });
