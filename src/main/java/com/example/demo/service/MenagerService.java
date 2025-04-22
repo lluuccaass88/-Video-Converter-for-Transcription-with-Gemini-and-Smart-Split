@@ -32,7 +32,7 @@ public class MenagerService {
 
     log.info("Extração do audio concluida");
 
-//    audioService.extractAudio(localPath + VIDEO_FILE_NAME, localPath + AUDIO_FILE_NAME);
+    audioService.extractAudio(localPath + VIDEO_FILE_NAME, localPath + AUDIO_FILE_NAME);
 
     List<byte []> filePathAudioList = new ArrayList<>();
 
